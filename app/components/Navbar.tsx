@@ -1,8 +1,24 @@
+"use client";
+
+import { useState } from "react";
+
 export default function Navbar() {
+    const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+    function closeMobileMenu() {
+        setIsMenuOpen(false);
+    }
+
     return (
         <nav className="flex gap-8 text-xl">
 
-            <input id="menu-toggle" type="checkbox" className="peer hidden" />
+            <input
+                id="menu-toggle"
+                type="checkbox"
+                className="peer hidden"
+                checked={isMenuOpen}
+                onChange={(event) => setIsMenuOpen(event.target.checked)}
+            />
             <label htmlFor="menu-toggle" className="cursor-pointer lg:hidden p-2">
                 <div className="w-6 h-0.5 bg-teal-900 mb-1 transition-all peer-checked:rotate-45 peer-checked:translate-y-2"></div>
                 <div className="w-6 h-0.5 bg-teal-900 mb-1 transition-opacity peer-checked:opacity-0"></div>
@@ -30,11 +46,11 @@ export default function Navbar() {
             {/* menu mobile */}
             <div className="absolute hidden top-24 w-full right-0 flex-col peer-checked:flex lg:hidden transition-all duration-300 bg-white">
                 <div className="text-right">
-                    <a href="#home" className="block p-3">Início</a>
-                    <a href="#especialidades" className="block p-3 border-t border-gray-300/50">Especialidades</a>
-                    <a href="#quem-somos" className="block p-3 border-t border-gray-300/50">Quem Somos</a>
-                    <a href="#depoimentos" className="block p-3 border-t border-gray-300/50">Depoimentos</a>
-                    <a href="#contato" className="block p-3 border-t border-gray-300/50">Contato</a>
+                    <a href="#home" className="block p-3" onClick={closeMobileMenu}>Início</a>
+                    <a href="#especialidades" className="block p-3 border-t border-gray-300/50" onClick={closeMobileMenu}>Especialidades</a>
+                    <a href="#quem-somos" className="block p-3 border-t border-gray-300/50" onClick={closeMobileMenu}>Quem Somos</a>
+                    <a href="#depoimentos" className="block p-3 border-t border-gray-300/50" onClick={closeMobileMenu}>Depoimentos</a>
+                    <a href="#contato" className="block p-3 border-t border-gray-300/50" onClick={closeMobileMenu}>Contato</a>
                 </div>
             </div>
         </nav>

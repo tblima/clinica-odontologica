@@ -1,5 +1,5 @@
 import Image from "next/image";
-import ImagemClinica from "@/app/assets/consultorio.png";
+import ImagemClinica from "@/app/assets/consultorio-odontologico.jpg";
 
 export default function Hero() {
     return (
