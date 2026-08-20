@@ -3,7 +3,7 @@ import ImagemClinica from "@/app/assets/consultorio-odontologico.jpg";
 
 export default function Hero() {
     return (
-        <section id="home" className="flex w-full h-96 lg:h-180 justify-between mb-10">
+        <section id="home" className="flex w-full h-96 lg:h-180 justify-between mb-10 mt-20">
             <div
                 className="w-full relative overflow-hidden flex flex-col justify-end"
                 data-aos="fade-right"
