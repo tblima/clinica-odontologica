@@ -24,7 +24,6 @@ export default function Footer() {
                     <FontAwesomeIcon icon={faYoutube} size="3x"  />
                 </div>
             </div>
-
         </footer>
     )
 }

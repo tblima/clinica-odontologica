@@ -10,6 +10,7 @@ import Contato from "@/app/components/Contato";
 import AOS from 'aos';
 import { useEffect } from 'react';
 import 'aos/dist/aos.css';
+import Copyright from "@/app/components/Copyright";
 
 export default function Home() {
     useEffect(() => {
@@ -27,6 +28,7 @@ export default function Home() {
         <Contato />
       </main>
       <Footer />
+        <Copyright />
     </div>
   );
 }
